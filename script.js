@@ -2,6 +2,7 @@ const btnMenu = document.querySelector('#header nav button');
 
 btnMenu.addEventListener('click', function() {
     const menuExpansivo = document.querySelector('#header nav ul');
+    console.log(menuExpansivo.classList);
 
     // //Transforma o DOMTOKENlist em um Arrey
     // const classes = Array.from(menuExpansivo.classList);
