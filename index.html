@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Expansivo</title>
-    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header">
@@ -24,6 +24,34 @@
             </ul>
         </nav>
     </header>
-    <script src="./script.js"></script>
+    <main>
+        <section>
+            <form action="formContato">
+                <div class="headerForm">
+                    <h2>Receba Nossas Notificações</h2>
+                </div>
+                <div class="rowInput">
+                    <label for="CPF">CPF</label>
+                    <input type="text" inputmode="numeric" placeholder="000.000.000-00" id="cpf" required>
+                    <p class="messageError CPF"></p>
+                </div>
+                <div class="rowInput">
+                    <label for="email">EMAIL</label>
+                    <input type="email" placeholder="email@gmail.com" id="email" required>
+                    <p class="messageError email"></p>
+                </div>
+                <div class="rowInput">
+                    <label for="tel">TELEFONE</label>
+                    <input type="tel" placeholder="99999-9999" id="tel" required>
+                    <p class="messageError tel"></p>
+                </div>
+                <div class="rowInput">
+                    <button id="limpaForm">Limpar</button>
+                    <button id="enviarForm">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -22,3 +22,49 @@ btnMenu.addEventListener('click', function() {
 
     menuExpansivo.classList.toggle("Ativado");
 });
+
+const btnEnviar = document.querySelector('#enviarForm');
+const btnLimpar = document.querySelector('#limparForm');
+const formContato = document.querySelector('#formContato');
+
+const inputCPF = document.querySelector('#CPF');
+const inputemail = document.querySelector('#email');
+const inputtel = document.querySelector('#tel');
+
+// ARROW Function () => ()
+btnLimpar.addEventListener('click', (event) => {
+    event.preventDefault();
+    limparForm();
+});
+
+btnEnviar.addEventListener('click', (event) => {
+    event.preventDefault();
+    enviarForm();
+});
+
+function limparForm() {
+    formContato.reset();
+}
+
+function enviarForm() {
+    console.log('Funcao Enviar');
+
+    if (inputCPF.value == "") {
+        document.querySelector(".messageError.cpf").innerHTML = "Preencha o CPF"
+        inputCPF.classList.add("inputError");
+    }
+
+    if (inputemail.value == "") {
+        document.querySelector(".messageError.cpf").innerHTML = "Preencha o Email"
+        inputCPF.classList.add("inputError");
+    }
+
+    if (inputtel.value == "") {
+        document.querySelector(".messageError.cpf").innerHTML = "Preencha o Telefone"
+        inputCPF.classList.add("inputError");
+    }
+}
+
+inputCPF.addEventListener('keyup', (event) => {
+    console.log(event.target);
+})
